@@ -1,34 +1,76 @@
 // Game Logic
 //variables
-let playerData = parseInt(localStorage.getItem('userCharacter')) || {
-    userCharacter: {name: 'characterName', Level: 1, stats:{Str: 1, Stam: 1, Mana: 1}, inventory: [], location:'zone0' },
-};
+
+//let playerData = parseInt(localStorage.getItem('userCharacter')) || {
+//    userCharacter: {
+//        name: 'characterName', 
+//        Level: 1, 
+//        stats:{Str: 1, Stam: 1, Mana: 1}, 
+//        inventory: [], 
+//        location:'zone0' 
+//    },
+//};
 
 //Create new game for user
 function newGame(){
     localStorage.clear();
-    playerData = parseInt(localStorage.getItem('userCharacter')) || {
-        userCharacter: {name: 'characterName', Level: 1, stats:{Str: 1, Stam: 1, Mana: 1}, inventory: [], location:'zone0' },
-    };
-    localStorage.setItem('userCharacter', JSON.stringify(playerData));
-    console.log(`local storage cleared`);
+//    playerData = parseInt(localStorage.getItem('userCharacter')) || {
+//        userCharacter: {
+//            name: 'characterName', 
+//            Level: 1, 
+//            stats:{Str: 1, Stam: 1, Mana: 1}, 
+//            inventory: [], 
+//            location:'zone0' 
+//        },
+//    };
+//    localStorage.setItem('userCharacter', JSON.stringify(playerData));
+//    console.log(`New Game Started!`, playerData);
+    console.log(`New Game Started!`);
+
+    window.location.href = './assets/zones/zone0.html';
 }
 
 
 //Load game data from local storage if a user has saved data
 function loadGame() {
-    let gameData = localStorage.getItem('userCharacter');
+    let savedData = localStorage.getItem('userCharacter');
 
-    if (gameData) {
+    if (savedData) {
         //Need to update player based on saved player data (stats, inventory, location)
-        playerData = JSON.parse(gameData);
-        updatePlayer(playerData);
+        playerData = JSON.parse(savedData);
+        //updatePlayer(playerData); //ADD DETAILS TO UPDATE PLAYER FUNCTION
         console.log('Game data loaded', playerData);
     } else {
-        playerData = 'null';
+        alert('No saved game found!');
         console.log('No saved game data found.');
     }
 }
+
+// Open Settings
+function settingsGame() {
+    // Add your logic for the settings page
+    console.log('Settings selected.');
+    alert('Settings menu is currently under development!');
+}
+
+// Exit Game
+function exitGame() {
+    if (confirm('Are you sure you want to exit the game?')) {
+        console.log('Game exited.');
+        window.close(); // Tries to close the browser tab (may not work in all browsers)
+    } else {
+        console.log('Exit canceled.');
+    }
+}
+
+function nextZone() {
+   
+    console.log('You have moved to Zone 1.');
+    alert('You have moved to Zone 1.');
+
+    window.location.href = './assets/zones/zone1.html';
+}
+
 
 //functions to update game state
 
