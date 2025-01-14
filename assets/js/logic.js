@@ -1,8 +1,16 @@
 // Game Logic
 
+
+
 let playerData = parseInt(localStorage.getItem('userCharacter')) || {
     userCharacter: {name: 'characterName', Level: 1},
 };
+
+//Create new game for user
+function newGame(){
+    localStorage.clear();
+    console.log(`local storage cleared`);
+}
 
 
 //Load game data from local storage if a user has saved
