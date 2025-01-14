@@ -63,6 +63,15 @@ function exitGame() {
     }
 }
 
+function nextZone() {
+   
+    console.log('You have moved to Zone 1.');
+    alert('You have moved to Zone 1.');
+
+    window.location.href = './assets/zones/zone1.html';
+}
+
+
 //functions to update game state
 
 //update player state to reflect states, inventory, location
