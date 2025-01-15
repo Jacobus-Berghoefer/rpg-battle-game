@@ -1,6 +1,6 @@
 <!-- Zone Structure -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-zone="zone0">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,11 +28,22 @@
 
     <footer>
         <section>
+            <div id="inGameOptions">
+                <ul id="playerInGameOptions">
+                    <li id="saveButton" onclick="saveGame()">Save Game</li>
+                    <li id="mainMenu" onclick="mainMenu()">Main Menu</li>
+                    <li id="settingsGame" onclick="settingsGame()">Settings</li>
+                    <li id="exitGame" onclick="exitGame()">Exit Game</li>
+                </ul>
+            </div>
+        </section>
+        <section>
             <div>
                 <p>Created by some guys</p>
             </div>
         </section>
     </footer>
-    <script src="assets/js/logic.js"></script>
+    <script src="../js/logic.js"></script>
+    <script src="../js/charCreate.js"></script>
 </body>
 </html>
