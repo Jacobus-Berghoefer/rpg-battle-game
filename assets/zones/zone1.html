@@ -1,6 +1,6 @@
 <!-- Zone Structure -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-zone="zone1">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,27 +9,37 @@
 </head>
 <body>
     <header>
-        <h1>Zone 0</h1>
+        <h1>Zone 1</h1>
     </header>
 
     <main>
         <section>
-            <p>Starter Zone "Zone 0"</p>
+            <p>Starter Zone "Zone 1"</p>
         </section>
         <section>
             <div>
-                <p>Explore and start your adventure!</p>
+                <p>Explore and start your adventure! Again!</p>
             </div>
         </section>
     </main>
 
     <footer>
         <section>
+            <div id="inGameOptions">
+                <ul id="playerInGameOptions">
+                    <li id="saveButton" onclick="saveGame()">Save Game</li>
+                    <li id="mainMenu" onclick="mainMenu()">Main Menu</li>
+                    <li id="settingsGame" onclick="settingsGame()">Settings</li>
+                    <li id="exitGame" onclick="exitGame()">Exit Game</li>
+                </ul>
+            </div>
+        </section>
+        <section>
             <div>
                 <p>Created by some guys</p>
             </div>
         </section>
     </footer>
-    <script src="assets/js/logic.js"></script>
+    <script src="../js/logic.js"></script>
 </body>
 </html>

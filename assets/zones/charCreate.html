@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Creator</title>
+</head>
+<body>
+    <h1>Create Your Character</h1>
+    <form id="character-form">
+        <label for="name">Character Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="strength">Strength:</label>
+        <input type="number" id="strength" name="strength" min="1" max="10" value="1"><br><br>
+
+        <label for="stamina">Stamina:</label>
+        <input type="number" id="stamina" name="stamina" min="1" max="10" value="1"><br><br>
+
+        <label for="mana">Mana:</label>
+        <input type="number" id="mana" name="mana" min="1" max="10" value="1"><br><br>
+
+        <button type="submit">Start Adventure</button>
+    </form>
+
+    <script src="../js/charCreate.js"></script>
+</body>
+</html>
